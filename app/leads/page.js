@@ -44,12 +44,12 @@ export default function LeadsPage() {
       {/* Top Nav */}
       <div style={{ backgroundColor: '#FFFFFF', borderBottom: '1px solid #E5E7EB', padding: '0 32px', display: 'flex', alignItems: 'center', height: '60px', gap: '32px' }}>
         <span style={{ fontWeight: '700', fontSize: '16px', color: '#111827', letterSpacing: '-0.3px' }}>HostPowr CRM</span>
-        {['Leads', 'CRM', 'Campaigns', 'Blacklist', 'Reports'].map(item => (
-          <a key={item} href={`/${item.toLowerCase()}`}
-            style={{ fontSize: '14px', color: item === 'Leads' ? '#2563EB' : '#6B7280', textDecoration: 'none', fontWeight: item === 'Leads' ? '600' : '400' }}>
-            {item}
-          </a>
-        ))}
+      {['Dashboard', 'Leads', 'CRM', 'Campaigns', 'Blacklist', 'Reports'].map(item => (
+  <a key={item} href={item === 'Dashboard' ? '/dashboard' : `/${item.toLowerCase()}`}
+    style={{ fontSize: '14px', color: item === 'Leads' ? '#2563EB' : '#6B7280', textDecoration: 'none', fontWeight: item === 'Leads' ? '600' : '400' }}>
+    {item}
+  </a>
+))}
         <div style={{ marginLeft: 'auto', fontSize: '13px', color: '#6B7280' }}>
           {leads.length} leads total
         </div>
